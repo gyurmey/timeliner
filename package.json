@@ -1,42 +1,54 @@
 {
-  "name": "timeliner",
-  "version": "1.5.0",
-  "description": "simple js animation timeline library",
-  "main": "timeliner.js",
-  "scripts": {
-    "build": "rollup src/timeliner.js > build/timeliner.js",
-    "mini": "rollup -c rollup.config.js",
-    "watch": "watchify src/timeliner.js --full-paths=false -t package-json-versionify --debug -o timeliner.js -v",
-    "start": "npm run watch",
-    "lint": "eslint src/",
-    "fix": "eslint --fix src/",
-    "test": "echo \"Error: no tests :(\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/zz85/timeliner.git"
-  },
-  "keywords": [
-    "timeline",
-    "animation",
-    "keyframe",
-    "tween",
-    "ease",
-    "controls",
-    "gui"
-  ],
-  "author": "joshua koo",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/zz85/timeliner/issues"
-  },
-  "homepage": "https://github.com/zz85/timeliner",
-  "devDependencies": {
-    "do.js": "^1.0.0",
-    "rollup": "^2.10.2",
-    "rollup-plugin-terser": "^5.3.0"
-  },
-  "dependencies": {
-    "eslint": "^7.0.0"
-  }
+    "name": "timeliner",
+    "version": "1.5.0",
+    "description": "simple js animation timeline library",
+    "main": "timeliner.js",
+    "scripts": {
+        "build": "rollup src/timeliner.js > build/timeliner.js",
+        "mini": "rollup -c rollup.config.js",
+        "watch": "watchify src/timeliner.js --full-paths=false -t package-json-versionify --debug -o timeliner.js -v",
+        "start": "npm run watch",
+        "lint": "eslint src/",
+        "fix": "eslint --fix src/",
+        "test": "echo \"Error: no tests :(\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/zz85/timeliner.git"
+    },
+    "keywords": [
+        "timeline",
+        "animation",
+        "keyframe",
+        "tween",
+        "ease",
+        "controls",
+        "gui"
+    ],
+    "author": "joshua koo",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/zz85/timeliner/issues"
+    },
+    "homepage": "https://github.com/zz85/timeliner",
+    "devDependencies": {
+        "do.js": "^1.0.0",
+        "rollup": "^2.10.2",
+        "rollup-plugin-terser": "^5.3.0"
+    },
+    "dependencies": {
+        "eslint": "^7.0.0"
+    },
+    "browserify": {
+        "transform": [
+            [
+                "babelify",
+                {
+                    "presets": [
+                        "@babel/preset-env"
+                    ]
+                }
+            ]
+        ]
+    }
 }
